@@ -1,0 +1,116 @@
+ body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            margin: 0;
+            padding: 0; 
+        }
+
+        
+        nav {
+            background-color: #d32f2f;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+       
+        nav a.active {
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+        
+
+        .page-content {
+            padding: 20px; /
+        }
+        h1 {
+            text-align: center;
+            color: #d32f2f;
+            margin-top: 20px; 
+            margin-bottom: 40px;
+        }
+        .trainers-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .trainer-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .trainer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        .trainer-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .trainer-header h2 {
+            margin: 0 0 5px 0;
+            font-size: 1.8em;
+        }
+        .trainer-header p {
+            margin: 0;
+            font-style: italic;
+            color: #777;
+        }
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .pokemon-slot {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .pokemon-slot img {
+            width: 80px;
+            height: 80px;
+            image-rendering: pixelated; 
+        }
+        .pokemon-slot p {
+            margin: 5px 0 0 0;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        
+        
+        #red { border-color: #e74c3c; }
+        #blue { border-color: #3498db; }
+        #cynthia { border-color: #34495e; }
+        #lance { border-color: #e67e22; }
+        #steven { border-color: #95a5a6; }
+        #ash { border-color: #f1c40f; }

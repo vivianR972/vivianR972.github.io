@@ -1,0 +1,146 @@
+body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding-top: 70px; /
+        }
+        nav {
+            background-color: #d32f2f;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1001; 
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav li { margin: 0 15px; }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover { background-color: rgba(255, 255, 255, 0.2); }
+        nav a.active { background-color: rgba(0, 0, 0, 0.25); }
+
+        h1, h2 { text-align: center; color: #1a1a1a; }
+        .page-content { padding: 20px; }
+
+        
+        #team-builder-container { max-width: 1000px; margin: auto; }
+        #team-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .team-slot {
+            background-color: white;
+            border-radius: 10px;
+            border: 2px dashed #ccc;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        .team-slot:hover { border-color: #337ab7; transform: translateY(-3px); }
+        .team-slot.filled { border-style: solid; border-color: #888; }
+        .team-slot img { width: 96px; height: 96px; }
+        .team-slot p { margin: 5px 0 0 0; font-weight: bold; text-transform: capitalize; font-size: 0.9em; }
+        .slot-placeholder { color: #aaa; font-size: 1.5em; font-weight: bold; }
+
+        #controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .control-btn {
+            padding: 12px 25px;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        #random-btn { background-color: #28a745; color: white; }
+        #random-btn:hover { background-color: #218838; }
+        #clear-btn { background-color: #dc3545; color: white; }
+        #clear-btn:hover { background-color: #c82333; }
+
+        
+        #verdict-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0 30px 0;
+            text-align: center;
+            border-left: 8px solid;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        #verdict-section h2 { margin: 0 0 10px 0; font-size: 1.5em; }
+        #verdict-text { font-size: 1.1em; margin: 0; }
+        .verdict-good { border-color: #28a745; }
+        .verdict-average { border-color: #ffc107; }
+        .verdict-bad { border-color: #dc3545; }
+        .verdict-incomplete { border-color: #6c757d; }
+
+        
+        #analysis-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .analysis-box h3 { margin-top: 0; text-align: center; padding-bottom: 10px; border-bottom: 2px solid #eee; }
+        #strengths h3 { color: #28a745; }
+        #weaknesses h3 { color: #dc3545; }
+        .types-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; min-height: 30px; }
+
+        
+        .modal {
+            display: none; position: fixed; z-index: 1002;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.6);
+        }
+        .modal-content {
+            background-color: #fefefe; margin: 5% auto; padding: 20px;
+            border-radius: 10px; width: 90%; max-width: 800px;
+            height: 80%; display: flex; flex-direction: column;
+        }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px; border-bottom: 1px solid #ddd; }
+        .modal-header h2 { margin: 0; }
+        .close-btn { font-size: 28px; font-weight: bold; cursor: pointer; }
+        #modal-search { width: 100%; padding: 10px; margin: 15px 0; border: 1px solid #ccc; border-radius: 5px; }
+        #pokemon-list {
+            overflow-y: auto; display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px;
+        }
+        .list-item { text-align: center; cursor: pointer; padding: 10px; border-radius: 5px; transition: background-color 0.2s; }
+        .list-item:hover { background-color: #f0f2f5; }
+        .list-item img { width: 72px; height: 72px; }
+        .list-item p { font-size: 0.8em; margin: 5px 0 0 0; text-transform: capitalize; }
+        
+        /* --- Badges de Type --- */
+        .type-badge { padding: 5px 12px; border-radius: 15px; font-size: 0.9em; font-weight: bold; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.4); }
+        .type-Normal { background-color: #A8A77A; } .type-Feu { background-color: #EE8130; } .type-Eau { background-color: #6390F0; } .type-Électrik { background-color: #F7D02C; } .type-Plante { background-color: #7AC74C; } .type-Glace { background-color: #96D9D6; } .type-Combat { background-color: #C22E28; } .type-Poison { background-color: #A33EA1; } .type-Sol { background-color: #E2BF65; } .type-Vol { background-color: #A98FF3; } .type-Psy { background-color: #F95587; } .type-Insecte { background-color: #A6B91A; } .type-Roche { background-color: #B6A136; } .type-Spectre { background-color: #735797; } .type-Dragon { background-color: #6F35FC; } .type-Ténèbres { background-color: #705746; } .type-Acier { background-color: #B7B7CE; } .type-Fée { background-color: #D685AD; }

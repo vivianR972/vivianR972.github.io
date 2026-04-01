@@ -1,0 +1,147 @@
+body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+nav {
+            background-color: #d32f2f;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        nav a.active {
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d32f2f;
+        }
+
+        
+        #types-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .type-btn {
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        }
+        .type-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .type-btn.active {
+            outline: 3px solid #000000;
+            transform: scale(1.05);
+        }
+        
+        
+        #search-container {
+            text-align: center;
+            margin: 30px auto;
+            display: none; 
+        }
+        #search-bar {
+            padding: 10px;
+            width: 50%;
+            max-width: 400px;
+            border-radius: 20px;
+            border: 2px solid #ddd;
+            font-size: 1em;
+        }
+        #search-bar:focus {
+            outline: none;
+            border-color: #d32f2f;
+        }
+        
+        
+        #pokemon-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        
+        .pokemon-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            text-align: center;
+            transition: opacity 0.3s;
+        }
+        .pokemon-card .pokedex-id {
+            font-weight: bold;
+            color: #888;
+            font-size: 1.1em;
+        }
+        .pokemon-card img {
+            width: 120px;
+            height: 120px;
+            align-self: center;
+        }
+        .pokemon-card h2 {
+            margin: 10px 0 5px;
+            font-size: 1.3em;
+            text-transform: capitalize;
+        }
+        .pokemon-names-other {
+            font-size: 0.85em;
+            color: #666;
+            margin: 0 0 10px 0;
+        }
+        .types-container {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .type-badge {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        
+        .type-Normal { background-color: #A8A77A; } .type-Feu { background-color: #EE8130; } .type-Eau { background-color: #6390F0; } .type-Électrik { background-color: #F7D02C; } .type-Plante { background-color: #7AC74C; } .type-Glace { background-color: #96D9D6; } .type-Combat { background-color: #C22E28; } .type-Poison { background-color: #A33EA1; } .type-Sol { background-color: #E2BF65; } .type-Vol { background-color: #A98FF3; } .type-Psy { background-color: #F95587; } .type-Insecte { background-color: #A6B91A; } .type-Roche { background-color: #B6A136; } .type-Spectre { background-color: #735797; } .type-Dragon { background-color: #6F35FC; } .type-Ténèbres { background-color: #705746; } .type-Acier { background-color: #B7B7CE; } .type-Fée { background-color: #D685AD; }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructeur d'Équipe Pokémon</title>
+    <script src="./js/equipe.js" defer></script>
+    <link rel="stylesheet" href="equipe.css">
+    
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="pokemon.html">Pokemon</a></li>
+            <li><a href="Dresseur.html">Dresseurs</a></li>
+            <li><a href="type.html">Types</a></li>
+            <li><a href="equipe.html" class="active">Equipes</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-content">
+        <div id="team-builder-container">
+            <h1>Constructeur d'Équipe Pokémon</h1>
+            <div id="verdict-section">
+                <h2>Verdict de l'Équipe</h2>
+                <p id="verdict-text"></p>
+            </div>
+            <div id="team-display"></div>
+            <div id="controls">
+                <button id="random-btn" class="control-btn">Équipe Aléatoire</button>
+                <button id="clear-btn" class="control-btn">Vider l'équipe</button>
+            </div>
+            <div id="analysis-section">
+                <div id="strengths" class="analysis-box">
+                    <h3>Avantages de l'équipe</h3>
+                    <div class="types-list"></div>
+                </div>
+                <div id="weaknesses" class="analysis-box">
+                    <h3>Faiblesses de l'équipe</h3>
+                    <div class="types-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="selection-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Choisissez un Pokémon</h2>
+                <span class="close-btn">&times;</span>
+            </div>
+            <input type="text" id="modal-search" placeholder="Rechercher...">
+            <div id="pokemon-list"></div>
+        </div>
+    </div>
+
+</body>
+</html>
